@@ -21,8 +21,8 @@ velocidade = 10
 x_controle = velocidade
 y_controle = 0
 vel = 10
-x_maca = randint(40, 780)
-y_maca = randint(50, 780)
+x_maca = randint(40, 980)
+y_maca = randint(50, 680)
 
 pontos = 0
 fonte = pygame.font.SysFont('arial', 40, bold=True, italic=True)
