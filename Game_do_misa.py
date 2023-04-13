@@ -20,6 +20,15 @@ y_maca = randint(50, 300)
 font = pygame.font.SysFont("arial", 20, True, True)
 nome_do_game = pygame.font.SysFont("arial", 20, True, True)
 
+# Armazenando posição da cobra
+    lista_cabeca = []
+    lista_cabeca.append(x_cobra)
+    lista_cabeca.append(y_cobra)
+# Crescendo a cobra
+    lista_cobra= [lista_cabeca]
+    lista_cobra.append(lista_cabeca)
+
+
 # Variavel ponto
 pts = 0
 
@@ -34,14 +43,6 @@ pygame.display.set_caption("::::GAME DO MISAEL::::")
 
     #for XeY in lista_cobra:
      #   pygame.draw.rect(tela (0, 255, 0), (XeY[0],XeY[1], 10, 10))
-
-# Armazenando posição da cobra
-    lista_cabeca= []
-    lista_cabeca.append(x_cobra)
-    lista_cabeca.append(y_cobra)
-# Crescendo a cobra
-    lista_cobra= []
-    lista_cobra.append(lista_cbc)
 
 # Inspecionando tela
 while True:
