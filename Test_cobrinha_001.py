@@ -32,7 +32,7 @@ pygame.display.set_caption(':::: GAME DO MISA ::::')
 relogio = pygame.time.Clock()
 lista_cobra = []
 comprimento_inicial = 100
-
+morreu = False
 
 def aumenta_cobra(lista_cobra):
     for XeY in lista_cobra:
@@ -40,6 +40,20 @@ def aumenta_cobra(lista_cobra):
         # XeY[0] = x
         # XeY[1] = y
         pygame.draw.rect(tela, (0, 255, 0), (XeY[0], XeY[1], 10, 10))
+
+### REINICIO DO JOGO APÓS O GAME OVER
+def reiniciar_jogo():
+    global pontos, comprimento_inicial, x_cobra, y_cobra, lista_cobra, lista_cabeça, x_maca, y_maca, morreu
+    pontos = 0
+    comprimento_inicial = 1
+    x_cobra = int(largura / 2)
+    y_cobra = int(altura / 2)
+    lista_cobra = []
+    lista_cabeça = []
+    x_maça = randint(40, 580)
+    y_maça = randint(50, 380)
+    morreu = False
+
 
 while True:
     relogio.tick(vel)
@@ -105,6 +119,28 @@ while True:
         del lista_cobra[0]
 
     aumenta_cobra(lista_cobra)
+
+    ### APRESENTA A TELA DE "GAME OVER"
+    if lista_cobra.count(lista_cabeca) > 1:
+        fonte2 = pygame.font.SysFont(': GAME DA COBRINHA : ', 20, True, True)
+        mensagem = 'Game Over! Sua pontuação foi {}. Pressione "R" para jogar novamente.'.format(pontos)
+        texto_formatado = fonte2.render(mensagem, True, (0, 0, 0))
+        ret_texto = texto_formatado.get_rect()
+
+        morreu = True
+        while morreu:
+            tela.fill((20, 80, 140))
+            for event in pygame.event.get():
+                if event.type == QUIT:
+                    pygame.quit()
+                    exit()
+                if event.type == KEYDOWN:
+                    if event.key == K_r:
+                        reiniciar_jogo()
+
+            ret_texto.center = (largura // 2, altura // 2)
+            tela.blit(texto_formatado, ret_texto)
+            pygame.display.update()
 
     ### FAZ COM QUE A COBRA APAREÇA NO EXTREMO OPOSTO, CASO TENTE ATRAVESSAR A TELA
     if x_cobra > largura:
