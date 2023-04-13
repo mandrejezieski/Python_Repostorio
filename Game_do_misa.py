@@ -1,3 +1,5 @@
+from typing import List, Any
+
 import pygame
 from pygame.locals import*
 from sys import exit
@@ -23,7 +25,8 @@ nome_do_game = pygame.font.SysFont("arial", 20, True, True)
 # Armazenando posição da cobra
 
 # Crescendo a cobra
-    
+    lista_cabeca = []
+
 
 
 # Variavel ponto
