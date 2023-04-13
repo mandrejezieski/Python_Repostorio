@@ -3,7 +3,7 @@ from pygame.locals import*
 from sys import exit
 from random import randint
 pygame.init()
-# Meu joguinho
+
 
 lar = 500
 alt = 400
