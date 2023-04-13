@@ -21,12 +21,9 @@ font = pygame.font.SysFont("arial", 20, True, True)
 nome_do_game = pygame.font.SysFont("arial", 20, True, True)
 
 # Armazenando posição da cobra
-    lista_cabeca = []
-    lista_cabeca.append(x_cobra)
-    lista_cabeca.append(y_cobra)
+
 # Crescendo a cobra
-    lista_cobra= [lista_cabeca]
-    lista_cobra.append(float(lista_cabeca))
+    
 
 
 # Variavel ponto
@@ -44,7 +41,7 @@ pygame.display.set_caption("::::GAME DO MISAEL::::")
     #for XeY in lista_cobra:
      #   pygame.draw.rect(tela (0, 255, 0), (XeY[0],XeY[1], 10, 10))
 
-# Inspecionando tela
+# Laços de repetição para nspecionar a tela
 while True:
     tela.fill((255, 255, 255))
     msg2 = f'game do misa'
@@ -81,7 +78,7 @@ while True:
         y_maca = randint(50, 300)
         pts = pts + 1
 
-    #aum_cobra(lista_cobra)
+
 
 # Exibe as mensagens na tela
     tela.blit(texto_form, (340, 50))
