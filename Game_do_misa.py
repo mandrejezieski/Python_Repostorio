@@ -26,7 +26,7 @@ nome_do_game = pygame.font.SysFont("arial", 20, True, True)
     lista_cabeca.append(y_cobra)
 # Crescendo a cobra
     lista_cobra= [lista_cabeca]
-    lista_cobra.append(lista_cabeca)
+    lista_cobra.append(float(lista_cabeca))
 
 
 # Variavel ponto
