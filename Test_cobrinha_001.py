@@ -1,3 +1,4 @@
+from typing import List, Any
 import pygame
 from pygame.locals import *
 from sys import exit
@@ -6,7 +7,7 @@ from random import randint
 pygame.init()
 
 largura = 1000
-altura = 700
+altura = 650
 
 x_cobra = int(largura / 2)
 y_cobra = int(altura / 2)
@@ -16,7 +17,7 @@ x_controle = velocidade
 y_controle = 0
 vel = 10
 x_maca = randint(40, 980)
-y_maca = randint(50, 680)
+y_maca = randint(50, 630)
 
 pontos = 0
 fonte = pygame.font.SysFont('arial', 40, bold=True, italic=True)
@@ -45,7 +46,7 @@ def reiniciar_jogo():
     lista_cobra = []
     lista_cabeca = []
     x_maca = randint(40, 980)
-    y_maca = randint(50, 680)
+    y_maca = randint(50, 630)
     morreu = False
 
 
@@ -93,12 +94,11 @@ while True:
     y_cobra = y_cobra + y_controle
 
     cobra = pygame.draw.rect(tela, (0, 255, 0), (x_cobra, y_cobra, 10, 10))
-    maca = pygame.draw.cir
-        #(tela, (0, 0, 255), (x_maca, y_maca, 40, 40))
+    maca = pygame.draw.rect(tela, (0, 0, 255), (x_maca, y_maca, 40, 40))
 
     if cobra.colliderect(maca):
         x_maca = randint(40, 980)
-        y_maca = randint(50, 680)
+        y_maca = randint(50, 630)
         pontos += 1
         vel += 1
         #barulho_colisao.play()
