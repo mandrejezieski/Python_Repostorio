@@ -46,15 +46,15 @@ def aumenta_cobra(lista_cobra):
 
 ### REINICIO DO JOGO APÓS O GAME OVER
 def reiniciar_jogo():
-    global pontos, comprimento_inicial, x_cobra, y_cobra, lista_cobra, lista_cabeça, x_maca, y_maca, morreu
+    global pontos, comprimento_inicial, x_cobra, y_cobra, lista_cobra, lista_cabeca, x_maca, y_maca, morreu
     pontos = 0
     comprimento_inicial = 1
     x_cobra = int(largura / 2)
     y_cobra = int(altura / 2)
     lista_cobra = []
-    lista_cabeça = []
-    x_maça = randint(40, 580)
-    y_maça = randint(50, 380)
+    lista_cabeca = []
+    x_maca = randint(40, 580)
+    y_maca = randint(50, 380)
     morreu = False
 
 
@@ -104,6 +104,7 @@ while True:
     cobra = pygame.draw.rect(tela, (50, 100, 150), (x_cobra, y_cobra, 20, 20))
     maca = pygame.draw.rect(tela, (255, 0, 0), (x_maca, y_maca, 20, 20))
 
+
     ### CONDIÇÃO DE COLISÃO:
     if cobra.colliderect(maca):
         x_maca = randint(40, 580)
@@ -114,13 +115,13 @@ while True:
         comprimento_inicial = comprimento_inicial + 1
 
     ### CRIA O CORPO DA COBRA
-    lista_cabeça = []
-    lista_cabeça.append(x_cobra)
-    lista_cabeça.append(y_cobra)
-    lista_cobra.append(lista_cabeça)
+    lista_cabeca = []
+    lista_cabeca.append(x_cobra)
+    lista_cabeca.append(y_cobra)
+    lista_cobra.append(lista_cabeca)
 
     ### APRESENTA A TELA DE "GAME OVER"
-    if lista_cobra.count(lista_cabeça) > 1:
+    if lista_cobra.count(lista_cabeca) > 1:
         fonte2 = pygame.font.SysFont(': GAME DA COBRINHA : ', 20, True, True)
         mensagem = 'Game Over! Sua pontuação foi {}. Pressione "R" para jogar novamente.'.format(pontos)
         texto_formatado = fonte2.render(mensagem, True, (0, 0, 0))
