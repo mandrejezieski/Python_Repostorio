@@ -1,9 +1,10 @@
 from typing import List, Any
-
 import pygame
 from pygame.locals import*
 from sys import exit
 from random import randint
+
+# Iniciando o pygame
 pygame.init()
 
 # tamanho da tela
@@ -22,29 +23,22 @@ y_maca = randint(50, 300)
 font = pygame.font.SysFont("arial", 20, True, True)
 nome_do_game = pygame.font.SysFont("arial", 20, True, True)
 
+# Função para aumentar a cobra
+def aum_cobra( lista_cobra):
+    for XeY in lista_cobra:
+        pygame.draw.rect(tela(0, 255, 0), (XeY[0], XeY[1], 10, 10))
+
 # Armazenando posição da cobra
 lista_cabeca = []
 lista_cabeca.append(x_cobra)
 lista_cabeca.append(y_cobra)
-# Crescendo a cobra
-lista_cobra = []
-lista_cobra.append(lista_cabeca)
 
-def aumenta_cobra()
 # Variavel ponto
 pts = 0
 
 # Definição da tela
 tela = pygame.display.set_mode((lar, alt))
 pygame.display.set_caption("::::GAME DO MISAEL::::")
-
-
-
-
-
-
-    #for XeY in lista_cobra:
-     #   pygame.draw.rect(tela (0, 255, 0), (XeY[0],XeY[1], 10, 10))
 
 # Laços de repetição para nspecionar a tela
 while True:
@@ -83,7 +77,10 @@ while True:
         y_maca = randint(50, 300)
         pts = pts + 1
 
+    # Crescendo a cobra
+    lista_cobra = [lista_cabeca]
 
+    aum_cobra(lista_cobra)
 
 # Exibe as mensagens na tela
     tela.blit(texto_form, (340, 50))
