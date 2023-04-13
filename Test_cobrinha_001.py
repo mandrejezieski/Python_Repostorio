@@ -11,8 +11,8 @@ pygame.init()
 
 #barulho_colisao = pygame.mixer.Sound('smw_coin (1).wav')
 
-largura = 700
-altura = 500
+largura = 1000
+altura = 700
 
 x_cobra = int(largura / 2)
 y_cobra = int(altura / 2)
@@ -21,8 +21,8 @@ velocidade = 10
 x_controle = velocidade
 y_controle = 0
 vel = 10
-x_maca = randint(40, 600)
-y_maca = randint(50, 400)
+x_maca = randint(40, 780)
+y_maca = randint(50, 780)
 
 pontos = 0
 fonte = pygame.font.SysFont('arial', 40, bold=True, italic=True)
@@ -31,7 +31,7 @@ tela = pygame.display.set_mode((largura, altura))
 pygame.display.set_caption(':::: GAME DO MISA ::::')
 relogio = pygame.time.Clock()
 lista_cobra = []
-comprimento_inicial = 100
+comprimento_inicial = 5
 morreu = False
 
 def aumenta_cobra(lista_cobra):
@@ -49,9 +49,9 @@ def reiniciar_jogo():
     x_cobra = int(largura / 2)
     y_cobra = int(altura / 2)
     lista_cobra = []
-    lista_cabeça = []
-    x_maça = randint(40, 580)
-    y_maça = randint(50, 380)
+    lista_cabeca = []
+    x_maca = randint(40, 980)
+    y_maca = randint(50, 680)
     morreu = False
 
 
@@ -102,10 +102,10 @@ while True:
     maca = pygame.draw.rect(tela, (0, 0, 255), (x_maca, y_maca, 40, 40))
 
     if cobra.colliderect(maca):
-        x_maca = randint(40, 600)
-        y_maca = randint(50, 400)
+        x_maca = randint(40, 780)
+        y_maca = randint(50, 780)
         pontos += 1
-      #  vel += 1
+        vel += 1
         #barulho_colisao.play()
         comprimento_inicial = comprimento_inicial + 1
 
