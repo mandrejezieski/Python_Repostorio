@@ -102,7 +102,7 @@ while True:
     maca = pygame.draw.rect(tela, (0, 0, 255), (x_maca, y_maca, 40, 40))
 
     if cobra.colliderect(maca):
-        x_maca = randint(40, 780)
+        x_maca = randint(40, 980)
         y_maca = randint(50, 780)
         pontos += 1
         vel += 1
