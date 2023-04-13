@@ -23,9 +23,11 @@ font = pygame.font.SysFont("arial", 20, True, True)
 nome_do_game = pygame.font.SysFont("arial", 20, True, True)
 
 # Armazenando posição da cobra
-
+lista_cabeca = []
+lista_cabeca.append(x_cobra)
+lista_cabeca.append(y_cobra)
 # Crescendo a cobra
-
+lista_
 
 
 # Variavel ponto
