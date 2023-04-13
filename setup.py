@@ -1,6 +1,7 @@
+import pygame
 import sys
 from cx_Freeze import setup, Executable
-import pygame
+
 
 
 base = None
@@ -13,7 +14,7 @@ executables = [
 
 buildOptions = dict(
         packages = [],
-        includes = [pygame, sys, locals(),random],
+        includes = [pygame, sys, locals()],
         include_files = [],
         excludes = []
 )
@@ -21,7 +22,7 @@ buildOptions = dict(
 setup(
     name = "Test_cobrinha_002.py",
     version = "1.0",
-    description = ": GAME DA COBRINHA : ",
+    description = ".",
     options = dict(build_exe = buildOptions),
     executables = executables
  )
