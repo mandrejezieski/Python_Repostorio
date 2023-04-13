@@ -103,7 +103,7 @@ while True:
 
     if cobra.colliderect(maca):
         x_maca = randint(40, 980)
-        y_maca = randint(50, 780)
+        y_maca = randint(50, 680)
         pontos += 1
         vel += 1
         #barulho_colisao.play()
