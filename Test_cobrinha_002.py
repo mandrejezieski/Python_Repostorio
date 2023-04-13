@@ -26,11 +26,11 @@ y_maca = randint(50, 380)
 
 ### CONFIGURAÇÃO DO CONTADOR DE PONTOS:
 pontos = 0
-fonte = pygame.font.SysFont(': GAME DA COBRINHA : ', 40, True, True)
+fonte = pygame.font.SysFont(': jogo da Maria : ', 40, True, True)
 
 ### CONFIGURAÇÕES DA TELA:
 tela = pygame.display.set_mode((largura, altura))
-pygame.display.set_caption(': GAME DA COBRINHA : ')
+pygame.display.set_caption(': jogo da Maria : ')
 relogio = pygame.time.Clock()
 
 ### TAMANHO INICIAL DA COBRA
@@ -42,7 +42,7 @@ morreu = False
 
 def aumenta_cobra(lista_cobra):
     for XeY in lista_cobra:
-        pygame.draw.rect(tela, (50, 100, 150), (XeY[0], XeY[1], 20, 20))
+        pygame.draw.rect(tela, (50, 100, 150), (XeY[0], XeY[1], 10, 10))
 
 
 ### REINICIO DO JOGO APÓS O GAME OVER
@@ -102,7 +102,7 @@ while True:
     y_cobra = y_cobra + y_controle
 
     ### PERSONAGENS
-    cobra = pygame.draw.rect(tela, (50, 100, 150), (x_cobra, y_cobra, 20, 20))
+    cobra = pygame.draw.rect(tela, (50, 100, 150), (x_cobra, y_cobra, 10, 10))
     maca = pygame.draw.rect(tela, (255, 0, 0), (x_maca, y_maca, 20, 20))
 
 
@@ -123,7 +123,7 @@ while True:
 
     ### APRESENTA A TELA DE "GAME OVER"
     if lista_cobra.count(lista_cabeca) > 1:
-        fonte2 = pygame.font.SysFont(': GAME DA COBRINHA : ', 20, True, True)
+        fonte2 = pygame.font.SysFont(': jogo da Maria : ', 20, True, True)
         mensagem = 'Game Over! Sua pontuação foi {}. Pressione "R" para jogar novamente.'.format(pontos)
         texto_formatado = fonte2.render(mensagem, True, (0, 0, 0))
         ret_texto = texto_formatado.get_rect()
