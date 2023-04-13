@@ -43,7 +43,7 @@ def aumenta_cobra(lista_cobra):
 
 ### REINICIO DO JOGO APÓS O GAME OVER
 def reiniciar_jogo():
-    global pontos, comprimento_inicial, x_cobra, y_cobra, lista_cobra, lista_cabeça, x_maca, y_maca, morreu
+    global pontos, comprimento_inicial, x_cobra, y_cobra, lista_cobra, lista_cabeca, x_maca, y_maca, morreu
     pontos = 0
     comprimento_inicial = 1
     x_cobra = int(largura / 2)
