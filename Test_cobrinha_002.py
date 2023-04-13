@@ -61,7 +61,7 @@ def reiniciar_jogo():
 
 ### REPETIÇÃO DO JOGO (TODOS OS JOGOS SE PASSAM NUM LOOP INFINITO):
 while True:
-    relogio.tick(vel)
+    relogio.tick(15)
     tela.fill((50, 50, 50))
     mensagem = f'Pontos: {pontos}'
     texto_formatado = fonte.render(mensagem, True, (0, 0, 0))
