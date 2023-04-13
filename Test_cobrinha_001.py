@@ -93,7 +93,8 @@ while True:
     y_cobra = y_cobra + y_controle
 
     cobra = pygame.draw.rect(tela, (0, 255, 0), (x_cobra, y_cobra, 10, 10))
-    maca = pygame.draw.rect(tela, (0, 0, 255), (x_maca, y_maca, 40, 40))
+    maca = pygame.draw.cir
+        #(tela, (0, 0, 255), (x_maca, y_maca, 40, 40))
 
     if cobra.colliderect(maca):
         x_maca = randint(40, 980)
