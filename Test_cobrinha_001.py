@@ -5,12 +5,6 @@ from random import randint
 
 pygame.init()
 
-#pygame.mixer.music.set_volume(0.1)
-#musica_de_fundo = pygame.mixer.music.load('BoxCat_Games_-_08_-_CPU_Talk (1).mp3')
-#pygame.mixer.music.play(-1)
-
-#barulho_colisao = pygame.mixer.Sound('smw_coin (1).wav')
-
 largura = 1000
 altura = 700
 
