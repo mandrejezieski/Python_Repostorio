@@ -71,6 +71,7 @@ while True:
 # Definindo objeto cobra e maça
     cobra = pygame.draw.rect(tela, (0, 255, 0), (x_cobra, y_cobra, 10, 10))
     maca = pygame.draw.rect(tela, (255, 0, 0), (x_maca, y_maca, 10, 10))
+    
 
 # Se acontecer a colição, maça se movimenta aleatoriamente
 # e agrecenta um na variavel ponto
