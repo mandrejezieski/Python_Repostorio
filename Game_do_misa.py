@@ -27,11 +27,21 @@ pts = 0
 tela = pygame.display.set_mode((lar, alt))
 pygame.display.set_caption("::::GAME DO MISAEL::::")
 
-# Função para aumentar a cobra
-def aum_cobra():
-    for XeY in lista_cobra:
-        pygame.draw.rect(tela (0, 255, 0), (XeY[0],XeY[1], 10, 10))
 
+
+
+
+
+    #for XeY in lista_cobra:
+     #   pygame.draw.rect(tela (0, 255, 0), (XeY[0],XeY[1], 10, 10))
+
+# Armazenando posição da cobra
+    lista_cabeca= []
+    lista_cabeca.append(x_cobra)
+    lista_cabeca.append(y_cobra)
+# Crescendo a cobra
+    lista_cobra= []
+    lista_cobra.append(lista_cbc)
 
 # Inspecionando tela
 while True:
@@ -70,12 +80,7 @@ while True:
         y_maca = randint(50, 300)
         pts = pts + 1
 
-# Armazenando posição da cobra
-    lista_cbc= [x_cobra, y_cobra]
-# Crescendo a cobra
-    lista_cobra= []
-    lista_cobra.append(lista_cbc)
-
+    #aum_cobra(lista_cobra)
 
 # Exibe as mensagens na tela
     tela.blit(texto_form, (340, 50))
