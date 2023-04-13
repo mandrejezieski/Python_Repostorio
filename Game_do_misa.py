@@ -40,8 +40,8 @@ while True:
     if pygame.key.get_pressed()[K_s]:
         y = y + 0.2
 
-    red_ver = pygame.draw.rect(tela, (255, 0, 0), (x, y, 10, 10))
-    red_amer = pygame.draw.rect(tela, (255, 255, 0), (x_amer, y_amer, 50, 50))
+    cobra = pygame.draw.rect(tela, (255, 0, 0), (x, y, 10, 10))
+    maca = pygame.draw.rect(tela, (255, 255, 0), (x_amer, y_amer, 50, 50))
     if red_ver.colliderect(red_amer):
         x_amer = randint(40, 400)
         y_amer = randint(50, 300)
