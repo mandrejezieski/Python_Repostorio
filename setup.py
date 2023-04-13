@@ -20,7 +20,7 @@ buildOptions = dict(
 )
 
 setup(
-    name = "Test_cobrinha_002.py",
+    name = "Test_002.py",
     version = "1.0",
     description = ".",
     options = dict(build_exe = buildOptions),
