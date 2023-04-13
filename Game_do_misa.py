@@ -53,7 +53,7 @@ while True:
     if pygame.key.get_pressed()[K_s]:
         y_cobra = y_cobra + 0.2
 
-#
+# Definindo objeto cobra e maça
     cobra = pygame.draw.rect(tela, (0, 255, 0), (x_cobra, y_cobra, 10, 10))
 
 # Se acontecer a colição maça se movimenta aleatoriamente
