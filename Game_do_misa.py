@@ -34,7 +34,7 @@ while True:
     msg = f'pontos: {pts}'
 
 # Mensagens na tela
-    texto_form2 = font.render(msg2, True, (0, 255, 0))
+    texto_form2 = font.render(msg2, True, (100, 100, 0))
     texto_form = font.render(msg, True, (0, 0, 255))
 
 # Condições de saida
@@ -55,13 +55,21 @@ while True:
 
 # Definindo objeto cobra e maça
     cobra = pygame.draw.rect(tela, (0, 255, 0), (x_cobra, y_cobra, 10, 10))
+    maca = pygame.draw.rect(tela, (255, 0, 0), (x_maca, y_maca, 10, 10))
 
-# Se acontecer a colição maça se movimenta aleatoriamente
+# Se acontecer a colição, maça se movimenta aleatoriamente
 # e agrecenta um na variavel ponto
     if cobra.colliderect(maca):
         x_maca = randint(40, 400)
         y_maca = randint(50, 300)
         pts = pts + 1
+
+# Armassenando posição da cobra
+    lista_cbc= []
+    lista_cbc.append(x_cobra)
+    lista_cbc.append(y_cobra)
+# Crescendo a cobra
+    
 
 # Exibe as mensagens na tela
     tela.blit(texto_form, (340, 50))
