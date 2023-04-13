@@ -23,15 +23,17 @@ y_maca = randint(50, 300)
 font = pygame.font.SysFont("arial", 20, True, True)
 nome_do_game = pygame.font.SysFont("arial", 20, True, True)
 
-# Função para aumentar a cobra
-def aum_cobra( lista_cobra):
-    for XeY in lista_cobra:
-        pygame.draw.rect(tela(0, 255, 0), (XeY[0], XeY[1], 10, 10))
+lista_cobra = []
+comprimento_inicial = 1
 
-# Armazenando posição da cobra
-lista_cabeca = []
-lista_cabeca.append(x_cobra)
-lista_cabeca.append(y_cobra)
+# Função para aumentar a cobra
+def aumenta_cobra(lista_cobra):
+    for XeY in lista_cobra:
+        # XeY = [x, y]
+        # XeY[0] = x
+        # XeY[1] = y
+        pygame.draw.rect(tela, (0, 255, 0), (XeY[0], XeY[1], 10, 10))
+
 
 # Variavel ponto
 pts = 0
@@ -42,7 +44,7 @@ pygame.display.set_caption("::::GAME DO MISAEL::::")
 
 # Laços de repetição para nspecionar a tela
 while True:
-    tela.fill((255, 255, 255))
+    tela.fill((2, 2, 2))
     msg2 = f'game do misa'
     msg = f'pontos: {pts}'
 
@@ -77,10 +79,16 @@ while True:
         y_maca = randint(50, 300)
         pts = pts + 1
 
-    # Crescendo a cobra
-    lista_cobra = [lista_cabeca]
+    lista_cabeca = []
+    lista_cabeca.append(x_cobra)
+    lista_cabeca.append(y_cobra)
 
-    aum_cobra(lista_cobra)
+    lista_cobra.append(lista_cabeca)
+
+    if len(lista_cobra) > comprimento_inicial:
+        del lista_cobra[0]
+
+    aumenta_cobra(lista_cobra)
 
 # Exibe as mensagens na tela
     tela.blit(texto_form, (340, 50))
