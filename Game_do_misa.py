@@ -51,7 +51,7 @@ while True:
         y_cobra = y_cobra + 0.2
 
 #Colição da cobra com a maça
-    cobra = pygame.draw.rect(tela, (0, 255, 0), (xcobra, ycobra, 10, 10))
+    cobra = pygame.draw.rect(tela, (0, 255, 0), (x_cobra, y_cobra, 10, 10))
 
 # Se acontecer a colição maça se movimenta aleatoriamente
 # e agrecenta um na variavel ponto
