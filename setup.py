@@ -19,7 +19,7 @@ buildOptions = dict(
 )
 
 setup(
-    name = "Test_cobrinha_002",
+    name = "Test_cobrinha_002.py",
     version = "1.0",
     description = ": GAME DA COBRINHA : ",
     options = dict(build_exe = buildOptions),
