@@ -8,16 +8,19 @@ pygame.init()
 lar = 500
 alt = 400
 
-# tamanho da cobra
+# Tamanho da cobra
 x_cobra = lar / 2
 y_cobra = alt / 2
 
-
+# Tamanho da maça
 x_maca = randint(40, 400)
 y_maca = randint(50, 300)
 
+# Fonte aplicada nos textos
 font = pygame.font.SysFont("arial", 20, True, True)
 nome_do_game = pygame.font.SysFont("arial", 20, True, True)
+
+# Variavel ponto
 pts = 0
 
 # Definição da tela
@@ -50,7 +53,7 @@ while True:
     if pygame.key.get_pressed()[K_s]:
         y_cobra = y_cobra + 0.2
 
-#Colição da cobra com a maça
+#
     cobra = pygame.draw.rect(tela, (0, 255, 0), (x_cobra, y_cobra, 10, 10))
 
 # Se acontecer a colição maça se movimenta aleatoriamente
