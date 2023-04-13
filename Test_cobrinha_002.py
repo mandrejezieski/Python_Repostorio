@@ -141,7 +141,7 @@ while True:
             tela.blit(texto_formatado, ret_texto)
             pygame.display.update()
 
-    ### FAZ COM QUE A COBRA APAREÇA LA EXTREMO OPOSTO, CASO TENTE ATRAVESSAR A TELA
+    ### FAZ COM QUE A COBRA APAREÇA no EXTREMO OPOSTO, CASO TENTE ATRAVESSAR A TELA
     if x_cobra > largura:
         x_cobra = 0
     if x_cobra < 0:
