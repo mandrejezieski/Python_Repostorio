@@ -27,9 +27,10 @@ lista_cabeca = []
 lista_cabeca.append(x_cobra)
 lista_cabeca.append(y_cobra)
 # Crescendo a cobra
-lista_
+lista_cobra = []
+lista_cobra.append(lista_cabeca)
 
-
+def aumenta_cobra()
 # Variavel ponto
 pts = 0
 
