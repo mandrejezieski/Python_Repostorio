@@ -106,6 +106,16 @@ while True:
 
     aumenta_cobra(lista_cobra)
 
+    ### FAZ COM QUE A COBRA APAREÇA NO EXTREMO OPOSTO, CASO TENTE ATRAVESSAR A TELA
+    if x_cobra > largura:
+        x_cobra = 0
+    if x_cobra < 0:
+        x_cobra = largura
+    if y_cobra > altura:
+        y_cobra = 0
+    if y_cobra < 0:
+        y_cobra = altura
+
     tela.blit(texto_formatado2, (180, 20))
     tela.blit(texto_formatado, (400, 80))
 
