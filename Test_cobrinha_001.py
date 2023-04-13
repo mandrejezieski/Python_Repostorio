@@ -95,7 +95,7 @@ while True:
 
     cobra = pygame.draw.rect(tela, (0, 255, 0), (x_cobra, y_cobra, 10, 10))
     maca = pygame.draw.rect(tela, (0, 0, 255), (x_maca, y_maca, 40, 40))
-    circle = pygame.draw.circle(tela, (255,255,255)(200,100,20,20))
+    
     if cobra.colliderect(maca):
         x_maca = randint(40, 980)
         y_maca = randint(50, 630)
